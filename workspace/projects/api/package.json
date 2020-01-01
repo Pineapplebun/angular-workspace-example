@@ -1,8 +1,16 @@
 {
-  "name": "@published/api",
-  "version": "0.0.1",
+  "name": "@pineapplebun/angular-workspace-example-api",
+  "version": "0.0.0",
   "peerDependencies": {
     "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/pineapplebun/angular-workspace-example.git",
+    "directory": "workspace/projects/api"
   }
 }

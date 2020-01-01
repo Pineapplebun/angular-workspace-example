@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '@pineapplebun/angular-workspace-example-api';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  constructor(private readonly api: ApiService) {}
+
+  get message() {
+    return this.api.getMessage();
+  }
+
+  alert() {
+    window.alert(this.message);
+  }
 }

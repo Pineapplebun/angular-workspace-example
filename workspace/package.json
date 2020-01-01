@@ -1,5 +1,5 @@
 {
-  "name": "workspace",
+  "name": "angular-workspace-example",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -19,6 +19,8 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "@pineapplebun/angular-workspace-example-api": ">=0.0.0",
+    "@pineapplebun/angular-workspace-example-buttons": ">=0.0.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
@@ -46,5 +48,10 @@
     "tsickle": "^0.37.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/pineapplebun/angular-workspace-example.git",
+    "directory": "workspace/projects/app"
   }
 }

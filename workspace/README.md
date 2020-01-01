@@ -1,27 +1,21 @@
-# Workspace
+# Angular Workspace Example
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+## Preface
 
-## Development server
+This is an example of how to use `npm link` with a published library in an Angular Workspace environment.
+There are 2 packages published with this repository:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- @pineapplebun/angular-workspace-example-buttons
+- @pineapplebun/angular-workspace-example-api
 
-## Code scaffolding
+The app uses both of these published libraries, but the buttons library is not implemented with a button.
+We would like to use a button implementation for the next version which has already been done. We just need to test its integration now using `npm link`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Steps
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. Run `npm i` in the `workspace` directory and run `npm start`, you should be able to see the starting page on `localhost:4200`
+2. Run `ng build buttons` to make `dist/buttons`
+3. Go to `dist/buttons` and run `npm link`
+4. Go to `workspace` and run `npm link "@pineapplebun/angular-workspace-example-buttons"`
+5. Observe that the button implementation shows up and opens an alert dialog on `localhost:4200`
+6. To unlink, run `npm unlink "@pineapplebun/angular-workspace-example-buttons"` in `workspace` directory, and run `npm unlink` in `dist/buttons`

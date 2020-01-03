@@ -18,4 +18,6 @@ We would like to use a button implementation for the next version which has alre
 3. Go to `dist/buttons` and run `npm link`
 4. Go to `workspace` and run `npm link "@pineapplebun/angular-workspace-example-buttons"`
 5. Observe that the button implementation shows up and opens an alert dialog on `localhost:4200`
-6. To unlink, run `npm unlink "@pineapplebun/angular-workspace-example-buttons"` in `workspace` directory, and run `npm unlink` in `dist/buttons`
+6. To unlink, run `npm unlink --no-save "@pineapplebun/angular-workspace-example-buttons"` in `workspace` directory, and run `npm unlink --no-save` in `dist/buttons`
+7. Remove `@pineapplebun` folder from `node_modules` by running `rm -rf node_modules/@pineapplebun`
+8. Run `npm i` to retrieve the old packages again
